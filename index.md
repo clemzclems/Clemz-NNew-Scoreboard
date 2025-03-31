@@ -24,6 +24,20 @@ Explore the results of different classes for the following schools:
 
 ![Banner](images/banner.jpg)
 
+
+<ul>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/jss1-mathematics.md{% endraw %}">JSS 1 Mathematics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/jss2-mathematics.md{% endraw %}">JSS 2 Mathematics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/jss3-mathematics.md{% endraw %}">JSS 3 Mathematics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/sss1-mathematics.md{% endraw %}">SSS 1 Mathematics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/sss2-mathematics.md{% endraw %}">SSS 2 Mathematics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/sss1-physics.md{% endraw %}">SSS 1 Physics</a></li>
+  <li><a href="{% raw %}{{ site.baseurl }}/schools/RRCR/sss2-physics.md{% endraw %}">SSS 2 Physics</a></li>
+</ul>
+
+
+
+
 ## Rosamby Royal Classroom (RRCR)
 
 - [JSS 1 Mathematics](schools/RRCR/jss1-mathematics.md)
