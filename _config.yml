@@ -1,5 +1,10 @@
-
-title: Clemz-New-Scoreboard
-baseurl: "/Clemz-New-Scoreboard"
-author: Clemz Clems
-description: Student Scoreboard for Clemz Students
+title: "My Classroom Results"
+description: "A platform to check school results."
+author: 
+  social:
+    facebook: "https://facebook.com/clemzclems"
+    instagram: "https://instagram.com/clemzclems"
+    twitter: "https://twitter.com/clemzclems"
+    youtube: "https://youtube.com/"
+    paypal: "https://paypal.me/clemzclems"
+permalink: pretty
