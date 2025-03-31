@@ -14,10 +14,12 @@ html, body {
     background-color: #fff; /* White background, can be customized */
     font-family: Arial, sans-serif; /* Example font */
 }
-
+/
 /* You can customize further like text color, font-size, etc. */
 .full-screen p, .full-screen h1, .full-screen h2 {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
 }
+
+
