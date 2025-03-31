@@ -1,10 +1,9 @@
-title: "My Classroom Results"
-description: "A platform to check school results."
-author: 
+title: My Unique Classroom Results
+baseurl: ""
+author:
   social:
-    facebook: "https://facebook.com/clemzclems"
-    instagram: "https://instagram.com/clemzclems"
-    twitter: "https://twitter.com/clemzclems"
-    youtube: "https://youtube.com/"
-    paypal: "https://paypal.me/clemzclems"
-permalink: pretty
+    facebook: https://facebook.com/yourprofile
+    instagram: https://instagram.com/yourprofile
+    twitter: https://twitter.com/yourprofile
+    youtube: https://youtube.com/yourchannel
+    paypal: https://paypal.me/clemzclems
