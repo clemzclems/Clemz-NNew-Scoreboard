@@ -1,8 +1,8 @@
 ---
-title: JSS 1 Mathematics
 layout: default
+title: JSS 1 Mathematics
+permalink: /schools/RRCR/jss1-mathematics/
 ---
-
 # JSS 1 Mathematics  
 **Weighting: 20% 20% 60%**
 
