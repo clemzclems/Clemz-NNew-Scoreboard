@@ -142,7 +142,6 @@
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-	<div id="result-sheet"></div>
-
+<div id="result-sheet" class="full-screen"></div>
 </body>
 </html>
