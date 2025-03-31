@@ -1,9 +1,30 @@
-title: My Unique Classroom Results
-baseurl: ""
+title: "School Results Portal"
+description: "A platform to access and manage school results."
+baseurl: "" # Leave empty if using a custom domain
+url: "https://yourgithubusername.github.io" # Replace with your GitHub Pages URL
+
+# Author Details
 author:
+  name: "Clemz Clems Graphics Works"
   social:
-    facebook: https://facebook.com/yourprofile
-    instagram: https://instagram.com/yourprofile
-    twitter: https://twitter.com/yourprofile
-    youtube: https://youtube.com/yourchannel
-    paypal: https://paypal.me/clemzclems
+    facebook: "https://facebook.com/clemzclems"
+    instagram: "https://instagram.com/clemzclems"
+    twitter: "https://twitter.com/clemzclems"
+    youtube: "https://youtube.com/@clemzclems"
+    paypal: "https://paypal.me/clemzclems?country.x=AE&locale.x=en_US"
+
+# Build settings
+theme: minima
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude unnecessary files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
