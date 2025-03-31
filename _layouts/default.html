@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% raw %}{{ page.title }}{% endraw %}</title>
-    <link rel="icon" type="image/png" href="{% raw %}{{ site.baseurl }}/images/favicon.png{% endraw %}">
-    <link rel="stylesheet" href="{% raw %}{{ site.baseurl }}/styles.css{% endraw %}">
+    <link rel="stylesheet" href="{% raw %}{{ site.baseurl }}/assets/css/styles.css{% endraw %}">
+    <link rel="icon" href="{% raw %}{{ site.baseurl }}/assets/images/favicon.png{% endraw %}" type="image/png">
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="{% raw %}{{ site.baseurl }}/assets/images/logo.png{% endraw %}" alt="Site Logo" class="logo">
+        </div>
+        <div class="banner-container">
+            <img src="{% raw %}{{ site.baseurl }}/assets/images/banner.jpg{% endraw %}" alt="Site Banner" class="banner">
+        </div>
+        
         <nav>
-            <div class="logo">
-                <img src="{% raw %}{{ site.baseurl }}/images/logo.png{% endraw %}" alt="Logo">
-            </div>
             <div class="menu">
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="hamburger">
@@ -28,10 +32,6 @@
                     <li><a href="{% raw %}{{ site.baseurl }}/#contact{% endraw %}">CONTACT</a></li>
                 </ul>
             </div>
-            <div class="dark-mode-toggle">
-                <input type="checkbox" id="dark-mode-switch">
-                <label for="dark-mode-switch">Dark Mode</label>
-            </div>
         </nav>
     </header>
 
@@ -39,25 +39,36 @@
         {% raw %}{{ content }}{% endraw %}
     </main>
 
+    <footer>
+        <div class="author-container">
+            <img src="{% raw %}{{ site.baseurl }}/assets/images/author.jpg{% endraw %}" alt="Author Image" class="author">
+        </div>
+        <p>&copy; {% raw %}{{ site.time | date: "%Y" }}{% endraw %} Clemz Clems Graphics Works. All Rights Reserved.</p>
+    </footer>
+
     <script>
         const darkModeToggle = document.getElementById('dark-mode-switch');
         const menuToggle = document.getElementById('menu-toggle');
 
-        darkModeToggle.addEventListener('change', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-
-        menuToggle.addEventListener('change', () => {
-            document.body.classList.toggle('menu-open');
-        });
-
-        const menuLinks = document.querySelectorAll('.menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                document.body.classList.remove('menu-open');
-                menuToggle.checked = false;
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark-mode');
             });
-        });
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('change', () => {
+                document.body.classList.toggle('menu-open');
+            });
+
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    document.body.classList.remove('menu-open');
+                    menuToggle.checked = false;
+                });
+            });
+        }
     </script>
 </body>
 </html>
