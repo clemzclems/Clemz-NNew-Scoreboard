@@ -1,132 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Unique Classroom Results</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" type="image/png" href="images/favicon.png">
-	<style>
-		/* General Reset */
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body, html {
-			width: 100%;
-			height: 100%;
-			font-family: Arial, sans-serif;
-			overflow: hidden; /* Prevent full page scrolling */
-			background: #f4f4f4;
-		}
-		/* Full-screen display */
-		main {
-			width: 100%;
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background: #fff;
-		}
-		#result-sheet {
-			width: 100%;
-			height: 100vh;
-			padding: 20px;
-			background: white;
-			overflow-y: auto; /* Allows scrolling within result section */
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-		}
-		header {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			background: #222;
-			color: white;
-			padding: 10px 0;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px 20px;
-		}
-		nav ul {
-			list-style: none;
-			display: flex;
-		}
-		nav ul li {
-			margin: 0 10px;
-		}
-		nav ul li a {
-			color: white;
-			text-decoration: none;
-		}
-		.dark-mode {
-			background: #333;
-			color: white;
-		}
-		.dark-mode #result-sheet {
-			background: #444;
-			color: white;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="School Logo">
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#rrcr">RRCR</a></li>
+                    <li><a href="#pjpa">PJPA</a></li>
+                    <li><a href="#dla">DLA</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-toggle-checkbox">
+                <label for="dark-mode-toggle-checkbox">Dark Mode</label>
+            </div>
+        </nav>
+    </header><main>
+    <section id="home">
+        <h1>Welcome to School Results Portal</h1>
+        <p>Explore results for different schools:</p>
+    </section>
+    
+    <section id="rrcr">
+        <h2>Rosamby Royal Classroom (RRCR)</h2>
+        <ul>
+            <li><a href="schools/RRCR/jss1-mathematics.md">JSS 1 Mathematics</a></li>
+        </ul>
+    </section>
+    
+    <section id="pjpa">
+        <h2>Parent & Joy Pride Academy (PJPA)</h2>
+        <ul>
+            <li><a href="schools/PJPA/jss1-mathematics.md">JSS 1 Mathematics</a></li>
+        </ul>
+    </section>
+    
+    <section id="dla">
+        <h2>Definite Land Academy (DLA)</h2>
+        <ul>
+            <li><a href="schools/DLA/jss1-mathematics.md">JSS 1 Mathematics</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <ul>
+            <li><a href="https://facebook.com/clemzclems">Facebook</a></li>
+            <li><a href="https://instagram.com/clemzclems">Instagram</a></li>
+            <li><a href="https://paypal.me/clemzclems">Donate via PayPal</a></li>
+        </ul>
+    </section>
+    
+    <section id="form">
+        <h2>Submit Your Details</h2>
+        <form action="https://formspree.io/f/mwpvdgeo" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
 
-	<header>
-		<div class="logo">
-			<img src="images/logo.png" alt="Logo" width="50">
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#home">HOME</a></li>
-				<li><a href="#rrcr">RRCR</a></li>
-				<li><a href="#pjpa">PJPA</a></li>
-				<li><a href="#dla">DLA</a></li>
-				<li><a href="#contact">CONTACT</a></li>
-			</ul>
-		</nav>
-		<div class="dark-mode-toggle">
-			<input type="checkbox" id="dark-mode-toggle-checkbox">
-			<label for="dark-mode-toggle-checkbox">Dark Mode</label>
-		</div>
-	</header>
-
-	<main>
-		<div id="result-sheet">
-			<h1>Welcome to My Unique Classroom Results</h1>
-			<p>Select a subject to view results in full screen.</p>
-		</div>
-	</main>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const darkModeToggle = document.getElementById('dark-mode-toggle-checkbox');
-
-			// Dark mode toggle
-			darkModeToggle.addEventListener('change', () => {
-				document.body.classList.toggle('dark-mode');
-			});
-
-			// Load Markdown files into full-screen view
-			const links = document.querySelectorAll("a[href$='.md']");
-			links.forEach(link => {
-				link.addEventListener("click", function (event) {
-					event.preventDefault();
-					const mdFile = this.getAttribute("href");
-
-					fetch(mdFile)
-						.then(response => response.text())
-						.then(mdContent => {
-							const htmlContent = marked.parse(mdContent);
-							document.getElementById("result-sheet").innerHTML = htmlContent;
-						})
-						.catch(error => console.error("Error loading Markdown file:", error));
-				});
-			});
-		});
-	</script>
-
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('dark-mode-toggle-checkbox').addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    });
+</script>
 
 </body>
 </html>
