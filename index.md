@@ -1,4 +1,49 @@
 ---
+layout: default
+title: School Results
+permalink: /
+---
+
+# Welcome to Our School Results Portal
+
+## Rosamby Royal Classroom (RRCR)
+- [JSS 1 Mathematics](/schools/RRCR/jss1-mathematics)
+- [JSS 2 Mathematics](/schools/RRCR/jss2-mathematics)
+- [JSS 3 Mathematics](/schools/RRCR/jss3-mathematics)
+- [SSS 1 Mathematics](/schools/RRCR/sss1-mathematics)
+- [SSS 2 Mathematics](/schools/RRCR/sss2-mathematics)
+- [SSS 1 Physics](/schools/RRCR/sss1-physics)
+- [SSS 2 Physics](/schools/RRCR/sss2-physics)
+
+## Parent & Joy Pride Academy (PJPA)
+- [JSS 1 Mathematics](/schools/PJPA/jss1-mathematics)
+- [JSS 2 Mathematics](/schools/PJPA/jss2-mathematics)
+- [Primary 4 Mathematics](/schools/PJPA/primary4-mathematics)
+- [Primary 5 Mathematics](/schools/PJPA/primary5-mathematics)
+
+## Definite Land Academy (DLA)
+- [JSS 1 Mathematics](/schools/DLA/jss1-mathematics)
+- [JSS 2 Mathematics](/schools/DLA/jss2-mathematics)
+- [SSS 1 Physics](/schools/DLA/sss1-physics)
+- [SSS 2 Physics](/schools/DLA/sss2-physics)
+
+## Contact Us
+For inquiries, reach out through our social media:
+- [Facebook]({{ site.author.social.facebook }})
+- [Instagram]({{ site.author.social.instagram }})
+- [Twitter]({{ site.author.social.twitter }})
+- [YouTube]({{ site.author.social.youtube }})
+- [Donate via PayPal]({{ site.author.social.paypal }})
+
+![Author](images/author.jpg)
+
+
+
+
+
+
+
+---
 title: Home
 layout: default
 ---
